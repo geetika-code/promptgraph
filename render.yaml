@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: promptgraph
+    runtime: docker
+    plan: free
+    envVars:
+      - key: LLM_BASE_URL
+        sync: false   # set in the Render dashboard: a hosted OpenAI-compatible endpoint
+      - key: LLM_MODEL
+        sync: false
+      - key: LLM_API_KEY
+        sync: false
+      # SQLite on the free plan is wiped on redeploy/sleep; the sample reseeds automatically.
+      # For persistence, add a disk on a paid plan mounted at /data.

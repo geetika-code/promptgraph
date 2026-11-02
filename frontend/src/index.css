@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-ink-950 text-slate-200 font-sans text-[13px] m-0; font-family: Inter, system-ui, sans-serif; }
+.react-flow__node { @apply !bg-[#15243a] !border !border-[#36506c] !rounded-lg !text-slate-100 !p-3 !min-w-[160px] !text-left; }
+.react-flow__node.selected-node { @apply !border-accent; box-shadow: 0 0 0 2px #1b605c; }
+.react-flow__node.status-success { border-color: #3ccf8a !important; }
+.react-flow__node.status-error { border-color: #ec6b7c !important; }
+.react-flow__node.status-skipped { opacity: 0.45; }
+.react-flow__edge-path { stroke: #57718f; }
+.react-flow__edge-text { fill: #adc2da; font-size: 10px; }
+.react-flow__controls-button { background: #111d30; border-bottom: 1px solid #2c3c53; fill: #cbd8ea; }
+.react-flow__controls-button:hover { background: #1b2a42; }
+.react-flow__attribution { display: none; }
+
+@layer components {
+  .btn { @apply inline-flex items-center gap-1.5 rounded-md border border-ink-600 bg-ink-800 px-2.5 py-1.5 text-slate-300 hover:bg-[#1b2a42] disabled:opacity-40 disabled:cursor-not-allowed; }
+  .btn-primary { @apply border-[#35c8b1] bg-[#24a995] font-semibold text-[#061713] hover:bg-[#2bbfa9]; }
+  .field { @apply mt-1.5 block w-full rounded border border-ink-600 bg-[#0a1321] p-2 font-mono text-xs text-slate-200; }
+  .label { @apply mt-3 block text-[11px] text-slate-400; }
+  .caption { @apply mx-2.5 mb-2 mt-3 text-[10px] tracking-[0.1em] text-slate-500; }
+}

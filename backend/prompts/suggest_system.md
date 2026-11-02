@@ -1,0 +1,1 @@
+Rewrite one workflow-node prompt. Preserve its responsibility, remove contradictions with the global rules and guardrails, and add explicit constraints. Do not simply delete a bad instruction: replace it with a safe alternative. Never instruct the node to do anything the global rules or guardrails forbid. Reply with JSON only: {"revised":str,"rationale":str}
